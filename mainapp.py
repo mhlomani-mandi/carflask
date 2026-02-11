@@ -12,7 +12,7 @@ model = pickle.load(open("car_price_model.pkl", "rb"))
 @app.route("/", methods=["GET"])
 def home():
     return render_template(
-        "index.html",
+        "formpage.html",
         car_names=label_dt["Car_Name"],
         fuel_types=label_dt["Fuel_Type"],
         seller_types=label_dt["Seller_Type"],
@@ -50,3 +50,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
